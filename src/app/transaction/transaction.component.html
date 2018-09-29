@@ -1,9 +1,9 @@
-<ul>
-  <li *ngFor="let transaction of transactions">{{transaction.id}}
 
-    <ul>
-      <li *ngFor="let product of transaction.product">{{product.name}} <span class="">{{product.quantity}}</span></li>
-    </ul>
-    
-  </li>
-</ul>
+  <div class="row">
+      <div class="col-6">
+          <a class="center btn btn-primary" routerLink="/find/transaction">Find</a>
+          </div>
+          <div class="col-6" >
+          <a class="btn btn-primary" routerLink="/add/transaction">Add</a>
+  </div>
+</div>

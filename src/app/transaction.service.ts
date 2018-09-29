@@ -17,11 +17,12 @@ export class TransactionService {
   }
 
   getTransaction(_id: string): Observable<Transaction>{
-    return this.http.get<Transaction>(this.url+"/"+_id)
+    return this.http.get<Transaction>(this.url+_id)
   }
 
   deleteTransaction(_id: string): Observable<Transaction>{
-    return this.http.delete<Transaction>(this.url+"/"+_id)
+    console.log("Delete")
+    return this.http.delete<Transaction>(this.url+_id)
   }
 
   addTransaction(transaction: Transaction): Observable<Transaction>{
@@ -29,10 +30,10 @@ export class TransactionService {
   }
 
   putTransaction(_id:string, transaction: Transaction): Observable<Transaction>{
-    return this.http.put<Transaction>(this.url+"/"+_id, transaction)
+    return this.http.put<Transaction>(this.url+_id, transaction)
   }
 
 
-  url = "http://localhost:3000/api/transactions/";
+  url = "/api/transactions/";
 }
 

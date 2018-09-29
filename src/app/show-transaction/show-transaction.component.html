@@ -1,3 +1,24 @@
-<p>
-  show-transaction works!
-</p>
+<div class="row" *ngIf="transaction">
+
+        <div class="container">
+          <div class="col">
+              <table class="table">
+                  <thead class="thead-light">
+                    <tr>
+                      <th>Product</th>
+                      <th>Qty</th>        
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let product of transaction.product">
+                        <td>{{product.name}}</td>
+                        <td>{{product.quantity}} </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            <button class="btn-alert" (click)="delete()">Delete</button>       
+          </div>
+
+</div>
+

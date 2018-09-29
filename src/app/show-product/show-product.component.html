@@ -1,0 +1,23 @@
+<div class="row" *ngIf="product">
+
+    <div class="container">
+      <div class="col">
+          <table class="table">
+              <thead class="thead-light">
+                <tr>
+                  <th>Product</th>
+                  <th>Qty</th>        
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                    <td>{{product.name}}</td>
+                    <td>{{product.quantity}} </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        <button class="btn-alert" (click)="delete()">Delete</button>       
+      </div>
+
+</div>
