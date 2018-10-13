@@ -1,5 +1,5 @@
-<div>
-    <label for="bid">Product Name</label>
+<div class="container row" dir="auto">
+    <label for="bid" i18n>Product Name</label>
     <input type="text" [(ngModel)] = "name" id="bid">
-    <input type="submit" (click)="onSubmit()">
+    <button (click)="onSubmit()" i18n>submit</button>
 </div>

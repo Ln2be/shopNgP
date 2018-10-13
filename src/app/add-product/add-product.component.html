@@ -1,3 +1,65 @@
-<p>
-  add-product works!
-</p>
+
+<form #MyForm="ngForm"> 
+        <div class="row" *ngIf="names" dir="auto">
+            <div class="col">
+                <div class="p container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="panel panel-default">
+                                <div class="panel-body">
+                                    <div *ngIf="names" class="table-responsive">
+                                        <table class="table table-condensed" >
+                                            <thead>
+                                                <tr>
+                                                    <td><strong i18n>Item</strong></td>
+                                                    <td class="text-center"><strong i18n>Quantity</strong></td>
+                                                    <td class="text-center"><strong i18n>Price</strong></td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <!-- foreach ($order->lineItems as $line) or some such thing here -->
+                                                <tr *ngFor="let name of names">
+                                                    <td>{{product[name].name}}</td>
+                                                    <td class="text-center">{{product[name].quantity}}</td>
+                                                    <td class="text-center">{{product[name].price | number}}</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class=" row" >
+                    <div class="p form-inline" *ngFor="let name of names" [hidden]="hidden[name]" >
+                        <div class="col" >
+                            <label for="product" i18n>product:</label>
+                            <input class="form-control" type="text" id="product" name="product" [(ngModel)] = "product[name].name" i18n-placeholder placeholder="enter name"  required>    
+                            </div>
+                            <div class="col" >
+                                    <label for="quantity" i18n>quantity:</label>
+                                    <input class="form-control" type="number" id="quantity" name="quantity" [(ngModel)] = "product[name].quantity" i18n-placeholder placeholder="enter quantity" required>
+                            </div>
+                            <div class="col" >
+                                <label for="quantity" i18n>price:</label>
+                                <input class="form-control" type="number" id="price" name="price" [(ngModel)] = "product[name].price" i18n-placeholder placeholder="enter price" required>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    
+    <div class=" row" >
+        <div class="col">
+                <button class="btn-info btn btn-block" (click)="showName()" i18n>add</button>
+        </div>
+        <div class="col">
+                <button class="btn btn-block" (click)="deleteName()" i18n>delete</button>
+        </div>
+    </div>
+    
+    <div class="list-group-item row">
+            <button class="btn-success btn btn-block" (click)="onSubmit()" [disabled]="!(names.length>0 && !MyForm.invalid)" i18n>Submit</button>
+    </div>

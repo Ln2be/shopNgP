@@ -4,6 +4,8 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs'
 import {Product } from './product'
 
+import { CONSTS } from './consts'
+
 @Injectable({
   providedIn: 'root'
 })
@@ -24,14 +26,29 @@ export class ProductService {
     return this.http.delete<Product>(this.url+_id)
   }
 
-  addProduct(product: Product): Observable<Product>{
-    return this.http.post<Product>(this.url, product)
+  addProduct(product: Product[]): Observable<Product[]>{
+    return this.http.post<Product[]>(this.url, product)
   }
 
   putProduct(_id:string, product: Product): Observable<Product>{
     return this.http.put<Product>(this.url+_id, product)
   }
 
-  url = "/api/products/";
+OProduct:Observable<Product[]>
+
+  throwProduct(product:Product[]): void{
+    this.OProduct = Observable.create((observer)=>{
+      observer.next(product)
+      observer.complete()
+    })
+  }
+
+  catchProduct(): Observable<Product[]>{
+    return this.OProduct;
+  }
+  
+
+  url = CONSTS.url+"products/"
+  // url = "http://localhost:3000/api/products/";
 
 }

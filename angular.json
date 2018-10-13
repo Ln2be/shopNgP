@@ -24,7 +24,7 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",
@@ -32,6 +32,13 @@
             ]
           },
           "configurations": {
+            "ar": {
+              "aot": true,
+              "outputPath": "dist/shopNg/",
+              "i18nFile": "src/locale/messages.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "ar"
+            },
             "production": {
               "fileReplacements": [
                 {
@@ -57,6 +64,9 @@
             "browserTarget": "shopNg:build"
           },
           "configurations": {
+            "ar": {
+              "browserTarget": "shopNg:build:ar"
+            },
             "production": {
               "browserTarget": "shopNg:build:production"
             }

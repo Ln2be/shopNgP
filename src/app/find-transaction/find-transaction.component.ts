@@ -8,7 +8,7 @@ import {Router } from '@angular/router'
 })
 export class FindTransactionComponent implements OnInit {
 
-  id
+  id = ""
 
   constructor(private router: Router) { }
 

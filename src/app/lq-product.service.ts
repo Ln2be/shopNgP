@@ -5,6 +5,8 @@ import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 import { LqProduct } from './lqProduct'
 
+import { CONSTS } from './consts'
+
 @Injectable({
   providedIn: 'root'
 })
@@ -33,5 +35,6 @@ export class LqProductService {
   }
 
 
-  url = "http://localhost:3000/api/lq_products/";
+  url = CONSTS.url + "lq.products/"
+  // url = "http://localhost:3000/api/lq_products/";
 }

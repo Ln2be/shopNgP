@@ -1,24 +1,85 @@
-<div class="row" *ngIf="transaction">
+<div *ngIf="transaction">
+    <div *ngIf="transaction.id" class="p container " dir="auto">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="text-right panel-heading">
+                            <div>
+                                <label for="id" i18n="@@stc1">Transaction number : </label>
+                                <strong id="id">{{transaction.id}}</strong>
+                            </div>
+                            <div >
+                                    <label for="clientPhone" i18n="@@stc2">Client Phone : </label>
+                                    <strong id="clientPhone">{{transaction.clientPhone}}</strong>
+                                </div>
+                        </div>
+                        <div class="panel-body">
+                            <div class="table-responsive">
+                                <table class="table table-condensed" >
+                                    <thead>
+                                        <tr>
+                                            <td><strong i18n>Item</strong></td>
+                                            <td class="text-center"><strong i18n>Quantity</strong></td>
+                                            <td class="text-center"><strong i18n>Price</strong></td>
+                                            <td class="text-right"><strong i18n>Totals</strong></td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let product of transaction.product">
+                                            <td>{{product.name}}</td>
+                                            <td class="text-center">{{product.quantity}}</td>
+                                            <td class="text-center">{{product.s_price | number}}</td>
+                                            <td class="text-right">{{product.totals | number}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="thick-line"></td>
+                                            <td class="thick-line"></td>
+                                            <td class="thick-line text-center"><strong i18n>Total</strong></td>
+                                            <td class="thick-line text-right">{{transaction.total | number}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <caption class="form-inline">{{transaction.date | date : 'M/d/yy, h:mm a'}}</caption>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button i18n="@@stc4">print</button>
+    </div>
+        
+    <div *ngIf="!transaction.id" class="p container" dir="auto">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div class="text-right panel-heading" i18n="@@12">
+                        Only these quantities exist from the following products :
+                    </div>
+                    <div class="panel-body">
+                        <div  class="table-responsive">
+                            <table class="table table-condensed" >
+                                <thead>
+                                    <tr>
+                                        <td><strong i18n>Item</strong></td>
+                                        <td class="text-center"><strong i18n>Quantity</strong></td>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let product of transaction.product">
+                                        <td>{{product.name}}</td>
+                                        <td class="text-center">{{product.quantity}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-        <div class="container">
-          <div class="col">
-              <table class="table">
-                  <thead class="thead-light">
-                    <tr>
-                      <th>Product</th>
-                      <th>Qty</th>        
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr *ngFor="let product of transaction.product">
-                        <td>{{product.name}}</td>
-                        <td>{{product.quantity}} </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            <button class="btn-alert" (click)="delete()">Delete</button>       
-          </div>
-
+<div class="container text-center" *ngIf="!transaction">
+    <span i18n="@@stc3">doesn't exist</span> {{goTo}}
 </div>
 

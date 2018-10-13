@@ -13,7 +13,10 @@ import { FindProductComponent } from './find-product/find-product.component'
 import { AddProductComponent } from './add-product/add-product.component'
 import { ShowProductComponent } from './show-product/show-product.component'
 
-import { ProductComponent } from './product/product.component'
+import { ProductComponent } from './product/product.component';
+import { LQProductComponent } from './lqproduct/lqproduct.component'
+
+import { OthersComponent } from './others/others.component'
 
 
 const routes: Routes = [
@@ -23,14 +26,16 @@ const routes: Routes = [
 {path: 'find/product', component: FindProductComponent},
 {path: 'add/product', component: AddProductComponent},
 
-{path: 'transaction/:id', component: ShowTransactionComponent},
+{path: 'transaction/:goTo', component: ShowTransactionComponent},
 {path: 'transaction', component: TransactionComponent},
 
 {path: '', component: HomeComponent},
 {path: 'product/:name', component: ShowProductComponent},
 
 {path: 'product', component: ProductComponent},
+{path: 'lqproduct', component: LQProductComponent},
 
+{path: 'others', component: OthersComponent},
 
 ];
 

@@ -1,23 +1,52 @@
-<div class="row" *ngIf="product">
+<div class="row" *ngIf="product" dir="auto">
 
     <div class="container">
       <div class="col">
-          <table class="table">
-              <thead class="thead-light">
-                <tr>
-                  <th>Product</th>
-                  <th>Qty</th>        
-                </tr>
-              </thead>
+            <table class="table">
+                <thead class="thead-light">
+                    <tr>
+                        <th i18n>Product</th>
+                        <th i18n>Qty</th>        
+                        <th i18n>Price</th>        
+                    </tr>
+                </thead>
               <tbody>
                 <tr>
                     <td>{{product.name}}</td>
                     <td>{{product.quantity}} </td>
+                    <td>{{product.price | number}} </td>
                 </tr>
               </tbody>
             </table>
-          </div>
-        <button class="btn-alert" (click)="delete()">Delete</button>       
-      </div>
+        </div>
+    </div>
 
+</div>
+<div *ngIf="products">
+        <div class="container" *ngFor="let product of products">
+                <div class="col">
+                      <table class="table table-striped">
+                          <thead>
+                              <tr>
+                                  <th i18n>Product</th>
+                                  <th i18n>Qty</th>        
+                                  <th i18n>Price</th>        
+                              </tr>
+                          </thead>
+                        <tbody>
+                          <tr>
+                              <td>{{product.name}}</td>
+                              <td>{{product.quantity}} </td>
+                              <td>{{product.price | number}} </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                  </div>
+              </div>
+</div>
+
+<div class="row" *ngIf="!product && !products" dir="rtl">
+    <dir class="text-center container">
+          <strong>{{name}}</strong><span i18n="@@spc1"> doesn't exist</span>   
+    </dir>
 </div>

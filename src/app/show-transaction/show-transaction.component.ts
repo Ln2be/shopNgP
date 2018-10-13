@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router'
 import { TransactionService } from '../transaction.service';
+import { Transaction } from '../transaction';
 
 
 @Component({
@@ -12,11 +13,9 @@ export class ShowTransactionComponent implements OnInit {
 
   transaction
 
-
   constructor(private route: ActivatedRoute, private transactionService: TransactionService) { }
-
-  id = this.route.snapshot.paramMap.get("id")
   
+  goTo = this.route.snapshot.paramMap.get("goTo")
 
   getTransaction(id:string): void{
     this.transactionService.getTransaction(id).subscribe((transaction) => {
@@ -28,8 +27,15 @@ export class ShowTransactionComponent implements OnInit {
     this.transactionService.deleteTransaction(this.transaction.id).subscribe()
   }
 
+  catchTransaction(){
+    this.transactionService.catchTransaction().subscribe(transaction=>{
+      this.transaction=transaction
+    })
+  }
+  
   ngOnInit() {
-    this.getTransaction(this.id)
+    if(this.goTo=="show") this.catchTransaction()
+    else this.getTransaction(this.goTo)
   }
 
 }

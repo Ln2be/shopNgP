@@ -12,31 +12,40 @@ import { FindTransactionComponent } from './find-transaction/find-transaction.co
 
 import { AppRoutingModule } from './/app-routing.module';
 import {FormsModule} from '@angular/forms';
+
 import { AddTransactionComponent } from './add-transaction/add-transaction.component';
-import { SafePipe } from './safe.pipe';
 import { HomeComponent } from './home/home.component';
+
 import { ProductComponent } from './product/product.component';
 import { FindProductComponent } from './find-product/find-product.component';
+
 import { AddProductComponent } from './add-product/add-product.component';
-import { ShowProductComponent } from './show-product/show-product.component'
+import { ShowProductComponent } from './show-product/show-product.component';
+import { OthersComponent } from './others/others.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TransactionComponent,
+
     LQProductComponent,
     ShowTransactionComponent,
+
     FindTransactionComponent,
     AddTransactionComponent,
-    SafePipe,
+
     HomeComponent,
+
     ProductComponent,
     FindProductComponent,
     AddProductComponent,
-    ShowProductComponent
+    
+    ShowProductComponent,
+    
+    OthersComponent,
+    
   ],
   exports:[
-    SafePipe
   ],
   imports: [
     BrowserModule,
@@ -45,7 +54,7 @@ import { ShowProductComponent } from './show-product/show-product.component'
     AppRoutingModule,
     FormsModule
   ],
-  providers: [SafePipe],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

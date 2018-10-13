@@ -1,20 +1,77 @@
-  <div>
-      <label for="clientPhone">Client Phone:</label>
-      <input type="text" id="clientPhone" [(ngModel)] = "transaction.clientPhone" >
-  </div>
-  <div *ngIf="names">
-      <div *ngFor="let name of names">
-          <label for="product">product:</label>
-          <input type="text" id="product" [(ngModel)] = "transaction.product[name].name" >
-          <label for="quantity">quantity:</label>
-          <input type="number" id="quantity" [(ngModel)] = "transaction.product[name].quantity">
-          <div>{{name}}{{ transaction.product[name].name}} </div>
-      </div>
-  </div>
 
+<form #MyForm="ngForm"> 
+    <div class="row" *ngIf="names" dir="auto">
+        <div class="col">
+            <div class="list-group-item " >
+                <label for="clientPhone" i18n>Client Phone:</label>
+                <input class="form-control" type="text" name="clientPhone" id="clientPhone" [(ngModel)] = "transaction.clientPhone" i18n-placeholder placeholder="enter phone number" #clientPhone="ngModel" required pattern="[2-4]{1}[0-9]{7}">
+            </div>
+            <div class="p container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div *ngIf="names" class="table-responsive">
+                                    <table class="table table-condensed" >
+                                        <thead>
+                                            <tr>
+                                                <td><strong i18n>Item</strong></td>
+                                                <td class="text-center"><strong i18n>Quantity</strong></td>
+                                                <td class="text-center"><strong i18n>Price</strong></td>
+                                                <td class="text-right"><strong i18n>Totals</strong></td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <!-- foreach ($order->lineItems as $line) or some such thing here -->
+                                            <tr *ngFor="let name of names">
+                                                <td>{{transaction.product[name].name}}</td>
+                                                <td class="text-center">{{transaction.product[name].quantity}}</td>
+                                                <td class="text-center">{{transaction.product[name].s_price | number}}</td>
+                                                <td class="text-right">{{transaction.product[name].total() | number}}</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="thick-line"></td>
+                                                <td class="thick-line"></td>
+                                                <td class="thick-line text-center"><strong i18n>Total</strong></td>
+                                                <td class="thick-line text-right">{{transaction.totals() | number}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" row" >
+                <div class="p form-inline" *ngFor="let name of names" [hidden]="hidden[name]" >
+                    <div class="col" >
+                        <label for="product" i18n>product:</label>
+                        <input class="form-control" type="text" id="product" name="product" [(ngModel)] = "transaction.product[name].name" i18n-placeholder placeholder="enter name"  required>    
+                        </div>
+                        <div class="col" >
+                                <label for="quantity" i18n>quantity:</label>
+                                <input class="form-control" type="number" id="quantity" name="quantity" [(ngModel)] = "transaction.product[name].quantity" i18n-placeholder placeholder="enter quantity" required>
+                        </div>
+                        <div class="col" >
+                            <label for="quantity" i18n>price:</label>
+                            <input class="form-control" type="number" id="price" name="price" [(ngModel)] = "transaction.product[name].s_price" i18n-placeholder placeholder="enter price" required>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</form>
 
-<button (click)="showName()">add</button>
-<button (click)="deleteName()">delete</button>
-<button (click)="onSubmit()">Submit</button>
+<div class=" row" >
+    <div class="col">
+            <button class="btn-info btn btn-block" (click)="showName()" i18n>add</button>
+    </div>
+    <div class="col">
+            <button class="btn btn-block" (click)="deleteName()" i18n>delete</button>
+    </div>
+</div>
 
-
+<div class="list-group-item row">
+        <button class="btn-success btn btn-block" (click)="onSubmit()" [disabled]="!(names.length>0 && !MyForm.invalid)" i18n>Submit</button>
+</div>

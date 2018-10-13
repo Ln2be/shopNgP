@@ -1,11 +1,12 @@
-<div class="col">
+<div class="col" dir="auto">
   <div class="container">
-    <ul>
-      <li><a routerLink="/transaction">Transaction</a></li>
-      <li><a routerLink="/product">Product</a></li>
-      <li><a routerLink="/lqProduct">Low Quantity Products</a></li>
+    <ul class="list-group" >
+      <li class="list-group-item" ><a class="btn btn-default btn-block btn-info mybutton" routerLink="/transaction" i18n>Transaction</a></li>
+      <li class="list-group-item" ><a class="btn btn-default btn-block btn-info" routerLink="/product" i18n>Product</a></li>
+      <li  class="list-group-item" ><a class="btn btn-default btn-block btn-info" routerLink="/lqproduct" i18n>Low Quantity Products</a></li>
+      <li  class="list-group-item" ><a class="btn btn-default btn-block btn-info" routerLink="/others" i18n="@@hc1">Other Services</a></li>
     </ul>
   </div>
 </div>
 
-<router-outlet></router-outlet>
+<router-outlet dir="auto"></router-outlet>

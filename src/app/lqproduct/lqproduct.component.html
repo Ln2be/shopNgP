@@ -1,3 +1,24 @@
-<ul>
-  <li *ngFor="let lqProduct of lqProducts">{{lqProduct.name}}  {{lqProduct.quantity}}</li>
-</ul>
+
+<div dir="auto" class="row" *ngIf="lqProducts">
+
+  <div class="container">
+    <div class="col">
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th i18n>Product</th>
+                <th i18n>Qty</th>        
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of lqProducts">
+                  <td>{{product.name}}</td>
+                  <td>{{product.quantity}} </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+    </div>
+
+</div>
+

@@ -1,1 +1,14 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Lateef:300,400,500');
+
+div {
+    font-family: Lateef;
+}
+
+div {
+    font-size: 1.5rem
+}
+
+.f {
+    font-family: Lateef;
+}

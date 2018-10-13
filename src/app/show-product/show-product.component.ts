@@ -12,27 +12,29 @@ import { ActivatedRoute } from '@angular/router'
 export class ShowProductComponent implements OnInit {
 
   product: Product
-
+  products:Product[]
 
   constructor(private productService: ProductService, private route: ActivatedRoute) { }
 
   name = this.route.snapshot.paramMap.get("name")
 
 
-  getProduct(id:string): void{
-    this.productService.getProduct(id).subscribe((product) => {
+  getProduct(name:string): void{
+    this.productService.getProduct(name).subscribe((product) => {
       this.product = product;
     })
 
-    console.log(this.name)
   }
 
-  delete(){
-    this.productService.deleteProduct(this.name).subscribe()
+  catchProduct(): void{
+    this.productService.catchProduct().subscribe((products)=>{
+      this.products = products
+    })
   }
 
   ngOnInit() {
-    this.getProduct(this.name)
+    if(this.name=="add") this.catchProduct();
+    else this.getProduct(this.name);
   }
 
 }

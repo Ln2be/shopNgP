@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="92eee6be6de0b11c924e3ab27db30257159c0a7c" datatype="html">
+        <source>Home</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/app.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <target>الرئيسية</target>
+      </trans-unit>
+      <trans-unit id="ef23c80eff6cdcec7c7e905ed1dab0da51bb5e56" datatype="html">
+        <source>Find</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/transaction/transaction.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/product/product.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <target>بحث</target>
+      </trans-unit>
+      <trans-unit id="f6755cff4957d5c3c89bafce5651f1b6fa2b1fd9" datatype="html">
+        <source>Add</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/transaction/transaction.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/product/product.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <target>اضافة</target>
+      </trans-unit>
+      <trans-unit id="d3cbff754f1c148f3fec696edd246993aea35b01" datatype="html">
+        <source>Product</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/lqproduct/lqproduct.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/home.component.html</context>
+          <context context-type="linenumber">5</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/show-product/show-product.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <target>النوعية</target>
+      </trans-unit>
+      <trans-unit id="3841794331853785859d777bcfa9a2326b8c61e6" datatype="html">
+        <source>Qty</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/lqproduct/lqproduct.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/show-product/show-product.component.html</context>
+          <context context-type="linenumber">9</context>
+        </context-group>
+        <target>الكمية</target>
+      </trans-unit>
+      <trans-unit id="826b25211922a1b46436589233cb6f1a163d89b7" datatype="html">
+        <source>Delete</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/lqproduct/lqproduct.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/show-product/show-product.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <target>مسح</target>
+      </trans-unit>
+      <trans-unit id="ef54b193d09104969bf8548db4a1386776e03ed9" datatype="html">
+        <source>You want</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/show-transaction/show-transaction.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <target>تريد</target>
+      </trans-unit>
+      <trans-unit id="169eed2bc3e08e1bea977bcc5d799379f6b8a758" datatype="html">
+        <source>of</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/show-transaction/show-transaction.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/show-transaction/show-transaction.component.html</context>
+          <context context-type="linenumber">41</context>
+        </context-group>
+        <target>من</target>
+      </trans-unit>
+      <trans-unit id="05ef29b35a53b4789b8f8917fdddf43279094392" datatype="html">
+        <source>but you have only</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/show-transaction/show-transaction.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+        <target>يوجد فقط</target>
+      </trans-unit>
+      <trans-unit id="782af9cadb90baf5ffeaa7878a285bc34516bf3a" datatype="html">
+        <source>Transactin Number</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/find-transaction/find-transaction.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <target>رقم الفاتورة</target>
+      </trans-unit>
+      <trans-unit id="890bdba4bcefbf662fad069d27194f66d66e73ff" datatype="html">
+        <source>Client Phone:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/add-transaction/add-transaction.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <target>هاتف الزبون</target>
+      </trans-unit>
+      <trans-unit id="a83424d8386cbda47b750587c1149c46c71a4b1e" datatype="html">
+        <source>enter phone number</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/add-transaction/add-transaction.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <target>رقم الهاتف</target>
+      </trans-unit>
+      <trans-unit id="9bca420227979312de74f0a932a003437410b1ab" datatype="html">
+        <source>Item</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/add-transaction/add-transaction.component.html</context>
+          <context context-type="linenumber">18</context>
+        </context-group>
+        <target>النوعية</target>
+      </trans-unit>
+      <trans-unit id="ca30c1aa79fb5ab487fbd2caa4ca01f2f6691d70" datatype="html">
+        <source>Quantity</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/add-transaction/add-transaction.component.html</context>
+          <context context-type="linenumber">19</context>
+        </context-group>
+        <target>الكمية</target>
+      </trans-unit>
+      <trans-unit id="4d6ee53858628de558a18623894a03c8673bce9e" datatype="html">
+        <source>Price</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/add-transaction/add-transaction.component.html</context>
+          <context context-type="linenumber">20</context>
+        </context-group>
+        <target>السعر</target>
+      </trans-unit>
+      <trans-unit id="ccba0ad0c9165d91b6063703e4f25080e9386d0b" datatype="html">
+        <source>Totals</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/add-transaction/add-transaction.component.html</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <target> السعر الاجمالي</target>
+      </trans-unit>
+      <trans-unit id="d04d5b5d13ac9acf9750f1807f0227eeee98b247" datatype="html">
+        <source>Total</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/add-transaction/add-transaction.component.html</context>
+          <context context-type="linenumber">35</context>
+        </context-group>
+        <target>المجموع</target>
+      </trans-unit>
+      <trans-unit id="58d1d0e826165d6c9188a671c892ef7811ba87e8" datatype="html">
+        <source>product:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/add-transaction/add-transaction.component.html</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/add-product/add-product.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <target>النوعية</target>
+      </trans-unit>
+      <trans-unit id="307f86fa18d2cd28829e95acdae26ba05cde31c3" datatype="html">
+        <source>enter name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/add-transaction/add-transaction.component.html</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/add-product/add-product.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <target>الاسم</target>
+      </trans-unit>
+      <trans-unit id="218dd60fb03aa5422a2c9ce3fba8cc4607e8287f" datatype="html">
+        <source>quantity:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/add-transaction/add-transaction.component.html</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/add-product/add-product.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <target>الكمية</target>
+      </trans-unit>
+      <trans-unit id="c5f29f4f6bce95610a81c98a3da6d9efb9747a15" datatype="html">
+        <source>enter quantity</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/add-transaction/add-transaction.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+        <target>الكمية</target>
+      </trans-unit>
+      <trans-unit id="b1e9d47ae307de7d763ab36c7285d41703b27196" datatype="html">
+        <source>price:</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/add-transaction/add-transaction.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <target>السعر</target>
+      </trans-unit>
+      <trans-unit id="195105a33bc5f1f5e113bb202908fc8f548f0348" datatype="html">
+        <source>enter price</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/add-transaction/add-transaction.component.html</context>
+          <context context-type="linenumber">58</context>
+        </context-group>
+        <target>السعر</target>
+      </trans-unit>
+      <trans-unit id="a11ec4e640f241329943237d2a3cceaa4823658e" datatype="html">
+        <source>add</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/add-transaction/add-transaction.component.html</context>
+          <context context-type="linenumber">68</context>
+        </context-group>
+        <target>اضافة</target>
+      </trans-unit>
+      <trans-unit id="70ef158c584bafe788e319a0bffa11b02ee9abf1" datatype="html">
+        <source>delete</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/add-transaction/add-transaction.component.html</context>
+          <context context-type="linenumber">71</context>
+        </context-group>
+        <target>مسح</target>
+      </trans-unit>
+      <trans-unit id="71c77bb8cecdf11ec3eead24dd1ba506573fa9cd" datatype="html">
+        <source>Submit</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/add-transaction/add-transaction.component.html</context>
+          <context context-type="linenumber">76</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/add-product/add-product.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <target>تاكيد</target>
+      </trans-unit>
+      <trans-unit id="b59ea65c89a5ae15b787d8318fdad9edd6fec243" datatype="html">
+        <source>Transaction</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/home.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <target>فاتورة</target>
+      </trans-unit>
+      <trans-unit id="54fd6749a2d2b3f8bea34d83ef2df6c4065a64d1" datatype="html">
+        <source>Low Quantity Products</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/home.component.html</context>
+          <context context-type="linenumber">6</context>
+        </context-group>
+        <target>النوعيات منخفضة الكمية</target>
+      </trans-unit>
+      <trans-unit id="5787fcac03eda5b96436527a54e60cfbb7c30d95" datatype="html">
+        <source>Product Name</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/find-product/find-product.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <target>اسم النوعية</target>
+      </trans-unit>
+      <trans-unit id="c98077fe229df56d1df276acd22818bd2885eddc" datatype="html">
+        <source>submit</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/find-product/find-product.component.html</context>
+          <context context-type="linenumber">4</context>
+        </context-group>
+        <target>تاكيد</target>
+      </trans-unit>
+            <trans-unit id="12" datatype="html">
+        <source>
+                    Only these quantities exist from the following products
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/show-transaction/show-transaction.component.html</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+        <target>فقط توجد هذه الكميات من النوعيات التالية :</target>
+      </trans-unit>
+            <trans-unit id="spc1" datatype="html">
+        <source>
+                    doesn't exist
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/show-product/show-product.component.html</context>
+          <context context-type="linenumber">26</context>
+        </context-group>
+        <target>
+لا يوجد
+        </target>
+      </trans-unit>
+                  <trans-unit id="stc1" datatype="html">
+        <source>
+                    Transaction number
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/show-transaction/show-transaction.component.html</context>
+          <context context-type="linenumber">8</context>
+        </context-group>
+        <target>
+رقم الفاتورة   :
+        </target>
+      </trans-unit>
+                        <trans-unit id="stc2" datatype="html">
+        <source>
+                   Client Phone
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/show-transaction/show-transaction.component.html</context>
+          <context context-type="linenumber">12</context>
+        </context-group>
+        <target>
+رقم الزبون     :
+        </target>
+      </trans-unit>
+                              <trans-unit id="stc3" datatype="html">
+        <source>
+                   doen't exist
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/show-transaction/show-transaction.component.html</context>
+          <context context-type="linenumber">81</context>
+        </context-group>
+        <target>
+لا توجد فاتورة بهذا الرقم
+        </target>
+      </trans-unit>
+                                    <trans-unit id="hc1" datatype="html">
+        <source>
+                   Other Services
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/home/home.component.html</context>
+          <context context-type="linenumber">7</context>
+        </context-group>
+        <target>
+        خدمات اخرى
+        </target>
+      </trans-unit>
+                                          <trans-unit id="oc1" datatype="html">
+        <source>
+                   what do you suggest
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/others/others.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <target>
+     ماذا تقترح هنا
+        </target>
+      </trans-unit>
+                                    <trans-unit id="stc4" datatype="html">
+        <source>
+                   print
+        </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/show-transaction/show-transaction.component.html</context>
+          <context context-type="linenumber">47</context>
+        </context-group>
+        <target>
+طباعة
+        </target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
