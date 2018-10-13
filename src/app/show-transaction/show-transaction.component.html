@@ -6,11 +6,11 @@
                         <div class="text-right panel-heading">
                             <div>
                                 <label for="id" i18n="@@stc1">Transaction number : </label>
-                                <strong id="id">{{transaction.id}}</strong>
+                                <span id="id">{{transaction.id}}</span>
                             </div>
                             <div >
                                     <label for="clientPhone" i18n="@@stc2">Client Phone : </label>
-                                    <strong id="clientPhone">{{transaction.clientPhone}}</strong>
+                                    <span id="clientPhone">{{transaction.clientPhone}}</span>
                                 </div>
                         </div>
                         <div class="panel-body">
@@ -18,28 +18,28 @@
                                 <table class="table table-condensed" >
                                     <thead>
                                         <tr>
-                                            <td><strong i18n>Item</strong></td>
-                                            <td class="text-center"><strong i18n>Quantity</strong></td>
-                                            <td class="text-center"><strong i18n>Price</strong></td>
-                                            <td class="text-right"><strong i18n>Totals</strong></td>
+                                            <td i18n>Item</td>
+                                            <td class="text-center" i18n>Quantity</td>
+                                            <td class="text-center" i18n>Price</td>
+                                            <td class="text-right" i18n>Totals</td>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr *ngFor="let product of transaction.product">
-                                            <td>{{product.name}}</td>
-                                            <td class="text-center">{{product.quantity}}</td>
-                                            <td class="text-center">{{product.s_price | number}}</td>
-                                            <td class="text-right">{{product.totals | number}}</td>
+                                            <td><strong>{{product.name}}</strong> </td>
+                                            <td class="text-center"><strong>{{product.quantity}} </strong> </td>
+                                            <td class="text-center"><strong>{{product.s_price | number}} </strong> </td>
+                                            <td class="text-right"><strong>{{product.totals | number}} </strong> </td>
                                         </tr>
                                         <tr>
                                             <td class="thick-line"></td>
                                             <td class="thick-line"></td>
-                                            <td class="thick-line text-center"><strong i18n>Total</strong></td>
-                                            <td class="thick-line text-right">{{transaction.total | number}}</td>
+                                            <td class="thick-line text-center" i18n>Total</td>
+                                            <td class="thick-line text-right"><strong>{{transaction.total | number}}</strong> </td>
                                         </tr>
                                     </tbody>
                                 </table>
-                                <caption class="form-inline">{{transaction.date | date : 'M/d/yy, h:mm a'}}</caption>
+                                <caption class="form-inline">{{transaction.date | date : 'd/MM/yy, h:mm a'}}</caption>
                             </div>
                         </div>
                     </div>

@@ -15,25 +15,25 @@
                                     <table class="table table-condensed" >
                                         <thead>
                                             <tr>
-                                                <td><strong i18n>Item</strong></td>
-                                                <td class="text-center"><strong i18n>Quantity</strong></td>
-                                                <td class="text-center"><strong i18n>Price</strong></td>
-                                                <td class="text-right"><strong i18n>Totals</strong></td>
+                                                <td i18n>Item</td>
+                                                <td class="text-center" i18n>Quantity</td>
+                                                <td class="text-center" i18n>Price</td>
+                                                <td class="text-right" i18n>Totals</td>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             <!-- foreach ($order->lineItems as $line) or some such thing here -->
                                             <tr *ngFor="let name of names">
-                                                <td>{{transaction.product[name].name}}</td>
-                                                <td class="text-center">{{transaction.product[name].quantity}}</td>
-                                                <td class="text-center">{{transaction.product[name].s_price | number}}</td>
-                                                <td class="text-right">{{transaction.product[name].total() | number}}</td>
+                                                <td><strong>{{transaction.product[name].name}}</strong> </td>
+                                                <td class="text-center"><strong>{{transaction.product[name].quantity}}</strong></td>
+                                                <td class="text-center"><strong>{{transaction.product[name].s_price | number}}</strong></td>
+                                                <td class="text-right"><strong>{{transaction.product[name].total() | number}}</strong></td>
                                             </tr>
                                             <tr>
                                                 <td class="thick-line"></td>
                                                 <td class="thick-line"></td>
-                                                <td class="thick-line text-center"><strong i18n>Total</strong></td>
-                                                <td class="thick-line text-right">{{transaction.totals() | number}}</td>
+                                                <td class="thick-line text-center" i18n>Total</td>
+                                                <td class="thick-line text-right"><strong>{{transaction.totals() | number}}</strong></td>
                                             </tr>
                                         </tbody>
                                     </table>
